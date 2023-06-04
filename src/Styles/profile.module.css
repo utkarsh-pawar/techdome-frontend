@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.blog {
+  width: 100vw;
+  height: 10rem;
+  display: flex;
+  border: 1px solid grey;
+  position: relative;
+}
+
+.img {
+  width: 10rem;
+}
+.delete {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  padding: 0.5rem;
+  background-color: red;
+  border-radius: 100000rem;
+  color: white;
+  font-size: larger;
+  cursor: pointer;
+}
+.edit {
+  position: absolute;
+  right: 5rem;
+  top: 1rem;
+  padding: 0.5rem;
+  background-color: grey;
+  border-radius: 100000rem;
+  color: white;
+  font-size: larger;
+  cursor: pointer;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

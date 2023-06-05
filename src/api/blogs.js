@@ -28,3 +28,11 @@ export const getBlogDetail = async (id) => {
   console.log(response.data);
   return response.data;
 };
+
+export const getAllBlogs = async () => {
+  const response = await axios.get(
+    `${process.env.REACT_APP_BASE_URL}/blog/all`
+  );
+  console.log(response.data);
+  return response.data;
+};

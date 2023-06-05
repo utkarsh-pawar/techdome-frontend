@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogcard {
+  height: 10rem;
+  width: 100vw;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+
+  display: flex;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.blogcard > img {
+  width: 10rem;
+  height: 100%;
+}
+
+.imgdiv {
+  height: 20rem;
+  background-position: center;
+  position: relative;
+}
+.img {
+  position: relative;
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.star {
+  color: #fff510;
+  font-size: 3.5rem;
+}

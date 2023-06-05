@@ -18,30 +18,38 @@ const Navbar = () => {
       <div className={styles["header-container"]}>
         <div className={styles["header-logo"]}></div>
         <div className={styles["header-links"]}>
+          {" "}
+          {isUser && (
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.active : "")}
+              to="/create-blog"
+            >
+              create blog
+            </NavLink>
+          )}
           <NavLink
             className={({ isActive }) => (isActive ? styles.active : "")}
             to="/blogs"
             end
           >
-            Blog
+            Blogs
           </NavLink>
-
-          {
+          {!isUser && (
             <NavLink
               className={({ isActive }) => (isActive ? styles.active : "")}
               to="/signup"
             >
               Signup
             </NavLink>
-          }
-          {
+          )}
+          {!isUser && (
             <NavLink
               className={({ isActive }) => (isActive ? styles.active : "")}
               to="/login"
             >
               Login
             </NavLink>
-          }
+          )}
           {isUser && (
             <Link
               className={({ isActive }) => (isActive ? styles.active : "")}

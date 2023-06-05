@@ -53,7 +53,7 @@ const Login = () => {
         </div>
 
         <button type="submit" className={styles.btn} onClick={loginHandler}>
-          Signup
+          Login
         </button>
       </form>
     </div>

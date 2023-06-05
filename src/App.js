@@ -10,6 +10,7 @@ import { userActions } from "./store/userSlice";
 import CreateBlog from "./pages/CreateBlog";
 import Profile from "./pages/profile";
 import EditPages from "./pages/editPage";
+import Blogs from "./pages/Blogs";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -24,7 +25,8 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/blogs" element={<Blog />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:id" element={<Blog />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/create-blog" element={<CreateBlog />} />
           <Route path="/profile" element={<Profile />} />

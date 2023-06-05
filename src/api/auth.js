@@ -27,7 +27,7 @@ export const login = async (data, notify, dispatch) => {
     console.log(response);
     localStorage.setItem("token", response?.data?.token);
     await dispatch(userActions.login({ token: response.data.token }));
-
+    notify("Logged in successfully");
     return response;
   } catch (e) {
     if (e.response) {
@@ -46,6 +46,7 @@ export const signup = async (data, notify) => {
       `${process.env.REACT_APP_BASE_URL}/user/signup`,
       data
     );
+    notify("New user created Login to continue");
     return response;
   } catch (e) {
     if (e.response) {
